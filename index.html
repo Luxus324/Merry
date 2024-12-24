@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merry Christmas Tita Bel🎄</title>
+  <style>
+     body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      flex-direction: column;
+
+      background: linear-gradient(270deg, #ff4d4d, #ffcc00, #33cc33, #0066ff);
+      background-size: 400% 400%;
+      animation: backgroundAnimation 8s ease infinite;
+    }
+
+    @keyframes backgroundAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 4em;
+      text-shadow: 2px 2px 10px #000;
+      margin-bottom: 10px; 
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #ffffff;
+      
+      margin-bottom: 20px; 
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      animation: fall 5s linear infinite, drift 3s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% {
+        top: -10%;
+      }
+      100% {
+        top: 100%; 
+      }
+    }
+
+    @keyframes drift {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(15px); }
+      100% { transform: translateX(-15px); }
+    }
+
+    .envelope {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: #e6e4e4;
+      border: 2px solid #000;
+      border-radius: 30px; 
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden; 
+      cursor: pointer;
+    }
+
+    
+    .envelope .flap {
+      position: absolute;
+      top: -2px; 
+      left: 50%;
+      transform:translateX(-50%) rotateX(180deg);
+      width: 0;
+      height: 0;
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      border-bottom: 100px solid #020101; 
+      transition: transform 0.3s ease-in-out;
+      z-index: 2;
+    }
+
+    
+    .envelope.open .flap {
+      transform: translateX(-50%) rotateX(0deg); 
+    }
+
+    .modal {
+      display: none; 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .modal-content {
+        background: linear-gradient(270deg, #ffa0a0, #ffcc00, #aeffae, #96c0ff);
+      background-size: 400% 400%;
+      animation: backgroundAnimation 8s ease infinite;
+      padding: 30px;
+      border-radius: 10px;
+      width: 600px;
+      height: 400px;
+      text-align: center;
+      position: relative; 
+      display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+    }
+
+    .modal .close-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .modal .close-btn:hover {
+      background-color: darkred;
+    }
+
+    .modal img {
+        max-width: 100%; 
+      height: auto;
+      max-height: 350px; 
+      margin-bottom: 20px; 
+      border-radius: 10px;
+    }
+
+    .snowman-emoji {
+  font-size: 50px; 
+  position: absolute; 
+  top: 50%; 
+  left: 20px; 
+  transform: translateY(-50%); 
+  z-index: 2; 
+}
+.tree-emoji {
+  font-size: 50px; 
+  position: absolute; 
+  top: 50%; 
+  right: 22px; 
+  transform: translateY(-50%); 
+  z-index: 2; 
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .envelope {
+    width: 250px;
+    height: 170px;
+  }
+
+  .envelope .flap {
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 85px solid #020101;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .envelope {
+    width: 200px;
+    height: 140px;
+  }
+
+  .envelope .flap {
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #020101;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .modal {
+    width: 80%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+  </style>
+</head>
+<body>
+    <h1>Merry Christmas</h1>
+  <h2>Click the Envelope</h2>
+
+  <div class="envelope" id="envelope">
+    <div class="flap"></div>
+  </div>
+
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <img src="MerryChristmas/src/img/main.jpg" alt="Christmas Image">
+      
+      <div class="snowman-emoji">
+        ☃️
+      </div>
+      <div class="tree-emoji">
+        🎄
+      </div>
+      <button class="close-btn" id="close-modal">Close</button>
+      
+    </div>
+  </div>
+
+
+  <script>
+    
+    document.getElementById('envelope').addEventListener('click', function() {
+      this.classList.toggle('open'); 
+      document.getElementById('modal').style.display = 'flex'; 
+    });
+
+    
+    document.getElementById('close-modal').addEventListener('click', function() {
+      document.getElementById('modal').style.display = 'none'; 
+    });
+  </script>
+
+
+  <script>
+    document.getElementById('envelope').addEventListener('click', function() {
+      this.classList.toggle('open');
+    });
+  </script>
+
+  <script>
+    const snowflakeSymbols = ['❄️', '❅', '❆'];
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.className = 'snowflake';
+      snowflake.textContent = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
+      snowflake.style.left = Math.random() * 100 + 'vw'; 
+      snowflake.style.fontSize = Math.random() * 24 + 12 + 'px'; 
+      snowflake.style.animationDuration = Math.random() * 3 + 3 + 's'; 
+      document.body.appendChild(snowflake);
+      setTimeout(() => snowflake.remove(), 5000);
+    }
+    setInterval(createSnowflake, 200);
+  </script>
+  
+  
+  <audio id="audio" autoplay muted>
+    <source src="MerryChristmas/src/song/jingle.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+      const audio = document.getElementById('audio');
+      document.addEventListener('click', function () {
+          audio.muted = false; 
+          audio.play().catch(e => console.error('Playback error:', e));
+      });
+  </script>
+</body>
+</html>
